@@ -1,0 +1,16 @@
+{
+  "name": "walletsystem",
+  "version": "1.0.0",
+  "description": "mini banking system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "papi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "simple-json-store": "0.0.1"
+  }
+}
