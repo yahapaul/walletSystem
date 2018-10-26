@@ -1,0 +1,103 @@
+body {
+    background-color:#eaecef;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+.wsTitle{
+    margin-top:20px;
+    text-align:center;
+    color:#181828;
+}
+
+.openaccount{
+    text-decoration: none;
+    margin-left: 10px;
+    border:1px solid #2a2a47;
+    padding: 2%;
+    border-radius:3px;
+    color:#2a2a47;
+   
+}
+.openaccount:hover{
+    text-decoration: none;
+    background-color:#bcbcff;
+    color:#2a2a47;
+}
+.login{
+    background-color:#181828;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 3px;
+}
+.login:hover{
+    text-decoration: none;
+    background-color: #1c1c33;
+    color:#ffffff;
+}
+.back{
+    text-decoration: none;
+    border:1px solid #2a2a47;
+    padding: 2%;
+    border-radius:3px;
+    color:#2a2a47;
+}
+.back:hover{
+    text-decoration: none;
+    background-color:#bcbcff;
+    color:#2a2a47;
+}
+.create{
+    background-color:#181828;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 3px;
+    margin-left:10px;
+}
+.create:hover{
+    text-decoration: none;
+    background-color: #1c1c33;
+    color:#ffffff;
+}
+.readmore:hover{
+    text-decoration: none;
+}
+/* 
+.welcome{
+    margin-left:1em;
+    margin-top:1em;
+} */
+.menulist{
+    margin-top:5em;
+}
+.yourbalance{
+    margin-left:3em;
+    margin-top:.5em;
+}
+
+
+.modal-box{
+  display:inline-block;
+  width: 95%;
+  margin-left: 1em;
+}
+.depo-with-submit{
+    background-color:#181828;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 3px;
+}
+.depo-with-submit:hover{
+    text-decoration: none;
+    background-color: #1c1c33;
+    color:#ffffff;
+}
+
+
+.layout{
+    margin-top:5em;
+    background-color: #ffffff;
+}

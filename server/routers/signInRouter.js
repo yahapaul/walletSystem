@@ -6,7 +6,7 @@ const store = new SimpleJsonStore('./users.json');
 
 router.post('/',(req,res,next) =>{
 	console.log('Log-In page only');
-	next();
+	next();	
 	},(req,res) =>{
 		const users = store.get('Users');
 		const inputUser ={
@@ -18,13 +18,13 @@ router.post('/',(req,res,next) =>{
 		for(var i = 0; i < users.length; i++) {
 			if(inputUser.id == users[i].id && inputUser.pin == users[i].pin){
 				console.log('Successfully LogIn');
-				res.send('Successfully Log In');
+				res.send(true);
 				global.ID = inputUser.id;
 				break;
 			}
 			else
-				console.log(inputUser.id + inputUser.pin);
-				res.send('Log In Failed');
+				console.log('LogIn Failed');
+				res.send(false);
 				global.ID = null;
 				break;
 		}

@@ -9,6 +9,7 @@ router.put('/deposit',(req,res) =>{
 	const input = req.body.debit;
 	const users = store.get('Users');
 	let respo = 0;
+	global.ID =123;
 	let temp ={};
 	if(global.ID !== null){
 		for(let i =0; i < users.length; i++){
@@ -26,10 +27,10 @@ router.put('/deposit',(req,res) =>{
 				};
 
 				//console.log(users[i].history[lth].transID);
+				console.log(users[i].debit);
 				break;
 			}
 		}
-		console.log(users[0].debit);
 		//console.log(users[0].history[0].transID);
 		store.set('Users',users);	
 	}//end of 8 	
@@ -49,7 +50,7 @@ router.put('/withdraw',(req,res) =>{
 				if(input < users[i].debit){
 					// console.log("PUMASOOOOOK sa pangalawa");
 					users[i].debit -= input;
-					respo = users[i].debit;
+					//respo = users[i].debit;
 
 					users[i].history[lth]= {
 						transID : uniqid(),
