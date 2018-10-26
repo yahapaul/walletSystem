@@ -2,7 +2,65 @@
 	"Users": [
 		{
 			"id": "123",
-			"pin": "123"
+			"pin": "123",
+			"debit": 57500,
+			"history": [
+				{
+					"transID": "1000",
+					"transType": "1213",
+					"details": "1231",
+					"dateTime": "1231"
+				},
+				{
+					"transID": "2bijw400jnpc6qxw",
+					"transType": "FundTransfer",
+					"details": "Transfer 3999 to 123",
+					"dateTime": "2018-10-26 09:27:12"
+				},
+				{
+					"transID": "2bijw400jnpc7ty9",
+					"transType": "FundTransfer",
+					"details": "Transfer 3999 to 124",
+					"dateTime": "2018-10-26 09:27:12"
+				},
+				{
+					"transID": "2bijw4wgjnpd11ve",
+					"transType": "Pay Bills",
+					"details": "Payed 3999 to Meralco",
+					"dateTime": "2018-10-26 09:50:29"
+				}
+			]
+		},
+		{
+			"id": "124",
+			"pin": "123",
+			"debit": 61001,
+			"history": [
+				{
+					"transID": "2bijw5fwjnpat3q8",
+					"transType": "Deposit",
+					"details": "Deposit 5000",
+					"dateTime": "2018-10-26 08:48:32"
+				},
+				{
+					"transID": "2bijw5fwjnpat7e2",
+					"transType": "Deposit",
+					"details": "Deposit 5000",
+					"dateTime": "2018-10-26 08:48:32"
+				},
+				{
+					"transID": "2bijw3m0jnpbrofx",
+					"transType": "Withdrawal",
+					"details": "withdraw 10000",
+					"dateTime": "2018-10-26 09:15:28"
+				},
+				{
+					"transID": "2bijw1m8jnpc60bm",
+					"transType": "FundTransfer",
+					"details": "Transfer 3999 to 123",
+					"dateTime": "2018-10-26 09:26:37"
+				}
+			]
 		}
 	]
 }
