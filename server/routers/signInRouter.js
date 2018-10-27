@@ -21,6 +21,7 @@ router.post('/',(req,res,next) =>{
 			if(inputUser.id == users[i].id && inputUser.pin == users[i].pin){
 				console.log('Successfully LogIn');
 				ws.write(inputUser.id);
+				ws.end();
 				check = true;
 				//alert('Successfully Login');
 				//global.ID = inputUser.id;

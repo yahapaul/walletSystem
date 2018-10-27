@@ -3,7 +3,7 @@
 		{
 			"id": "123",
 			"pin": "123",
-			"debit": null,
+			"debit": 502,
 			"fullname": "Victor Dalisay",
 			"address": "Qc",
 			"history": [
@@ -140,22 +140,100 @@
 					"dateTime": "2018-10-27 16:15:05"
 				},
 				{
-					"transID": "2bijw17bsjnr8cgjs",
-					"transType": "FundTransfer",
-					"details": "Transfer 100 to 124",
-					"dateTime": "2018-10-27 17:11:44"
-				},
-				{
-					"transID": "2bijwusojnr8twly",
+					"transID": "2bijw1894jnr9s33d",
 					"transType": "Deposit",
-					"details": "Deposit 300",
-					"dateTime": "2018-10-27 17:28:28"
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 17:55:01"
 				},
 				{
-					"transID": "2bijwusojnr8u3hm",
+					"transID": "2bijw1894jnr9sa0m",
+					"transType": "Pay Bills",
+					"details": "Payed 99 to  Meralco",
+					"dateTime": "2018-10-27 17:55:01"
+				},
+				{
+					"transID": "2bijw16dkjnr9yfd9",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 17:58:59"
+				},
+				{
+					"transID": "2bijw18b0jnr9ztlc",
 					"transType": "Withdrawal",
-					"details": "withdraw 300",
-					"dateTime": "2018-10-27 17:28:28"
+					"details": "withdraw 100",
+					"dateTime": "2018-10-27 18:01:03"
+				},
+				{
+					"transID": "2bijw18b0jnra04db",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 18:01:03"
+				},
+				{
+					"transID": "2bijw18b0jnra0cox",
+					"transType": "Pay Bills",
+					"details": "Payed 99 to  Meralco",
+					"dateTime": "2018-10-27 18:01:03"
+				},
+				{
+					"transID": "2bijw17k4jnra1pni",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 18:02:22"
+				},
+				{
+					"transID": "2bijw17k4jnra1vxh",
+					"transType": "Pay Bills",
+					"details": "Payed 100 to  Meralco",
+					"dateTime": "2018-10-27 18:02:22"
+				},
+				{
+					"transID": "2bijw14e8jnraco4v",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 18:10:21"
+				},
+				{
+					"transID": "2bijw14e8jnracuol",
+					"transType": "Withdrawal",
+					"details": "withdraw 100",
+					"dateTime": "2018-10-27 18:10:21"
+				},
+				{
+					"transID": "2bijw16iwjnrafsjn",
+					"transType": "Deposit",
+					"details": "Deposit 99",
+					"dateTime": "2018-10-27 18:13:19"
+				},
+				{
+					"transID": "2bijw16iwjnrafyd2",
+					"transType": "Withdrawal",
+					"details": "withdraw 99",
+					"dateTime": "2018-10-27 18:13:19"
+				},
+				{
+					"transID": "2bijw16iwjnral2t3",
+					"transType": "Pay Bills",
+					"details": "Payed 100 to Meralco",
+					"dateTime": "2018-10-27 18:13:19"
+				},
+				{
+					"transID": "2bijw16iwjnralhb9",
+					"transType": "Pay Bills",
+					"details": "Payed 100 to ManilaWater",
+					"dateTime": "2018-10-27 18:13:19"
+				},
+				{
+					"transID": "2bijw181ojnram6m3",
+					"transType": "FundTransfer",
+					"details": "Transfer 199 to 124",
+					"dateTime": "2018-10-27 18:18:26"
+				},
+				{
+					"transID": "2bijwv28jnran8jy",
+					"transType": "Withdrawal",
+					"details": "withdraw 99",
+					"dateTime": "2018-10-27 18:19:22"
 				}
 			]
 		},

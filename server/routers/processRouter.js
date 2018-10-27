@@ -47,17 +47,17 @@ router.put('/deposit',(req,res) =>{
 });//end of 7
 
 router.put('/withdraw',(req,res) =>{
+	try {  
+    	var data = fs.readFileSync('secret.txt', 'utf8');
+    	loginID = data;
+   		//console.log(global.ID);    
+	}catch(e) {
+   		console.log('Error:', e.stack);
+	}
 	if(loginID !== null){
 		const users = store.get('Users');
 	 	let input = req.body.withdraw;
 	 	let respo = 0;
-	 	try {  
-    		var data = fs.readFileSync('secret.txt', 'utf8');
-    		loginID = data;
-    		//console.log(global.ID);    
-		}catch(e) {
-    		console.log('Error:', e.stack);
-		}
 		for(let i =0; i < users.length; i++){
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
 			//console.log(loginID + "sd" + users[i].id);
@@ -102,19 +102,19 @@ router.get('/balance',(req,res) =>{
 router.put('/fundTransfer',(req,res) =>{
 	const users = store.get('Users');
 	let checker = false;
+	try{  
+    		var data = fs.readFileSync('secret.txt', 'utf8');
+    		loginID = data;
+    		//console.log(global.ID);    
+		}catch(e) {
+    		console.log('Error:', e.stack);
+	}
+
 	if(loginID !== null){
 		let input ={
 			id : req.body.id,
 			amount : req.body.amount
 		}
-		try{  
-    		var data = fs.readFileSync('secret.txt', 'utf8');
-    		loginID = data;
-    		//console.log(global.ID);    
-		}catch(e){
-    		console.log('Error:', e.stack);
-		}
-
 		for(var i = 0; i < users.length; i++){
 			if(loginID === users[i].id && users[i].id !== input.id){
 				lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
@@ -155,19 +155,20 @@ router.put('/fundTransfer',(req,res) =>{
 });
 
 router.put('/payBills',(req,res)=>{
+	try{  
+    	var data = fs.readFileSync('secret.txt', 'utf8');
+    	loginID = data;
+    	//console.log(global.ID);    
+		}catch(e) {
+    		console.log('Error:', e.stack);
+	}
+
 	if(loginID !== null){
 		const users = store.get('Users');
 	 	const input = {
 	 		amount : req.body.amount,
 	 		recipient : req.body.recipient
 	 	};
-	 	try{  
-    		var data = fs.readFileSync('secret.txt', 'utf8');
-    		loginID = data;
-    		//console.log(global.ID);    
-		}catch(e){
-    		console.log('Error:', e.stack);
-		}
 		for(let i =0; i < users.length; i++){
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
 			if(users[i].id === loginID){	
@@ -183,7 +184,6 @@ router.put('/payBills',(req,res)=>{
 						details : `Payed ${input.amount} to ${input.recipient}`,
 						dateTime : global.dateTime
 					};
-
 					console.log('Payment Success');
 					break;	
 				}

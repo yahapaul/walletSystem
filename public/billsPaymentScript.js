@@ -7,19 +7,20 @@
     console.log("wew");
     //event.preventDefault();
     if(document.getElementById('meralco').checked === true){
-      recipient +=" " +document.getElementById('meralco').value;
+      recipient +="" +document.getElementById('meralco').value;
     }
     else if(document.getElementById('manilaWater').checked === true){
-      recipient +=" " +document.getElementById('manilaWater').value;
+      recipient +="" +document.getElementById('manilaWater').value;
     }  
     else if(document.getElementById('pldt').checked === true){
-      recipient +=" " +document.getElementById('pldt').value;
+      recipient +="" +document.getElementById('pldt').value;
     }  
     else if(document.getElementById('philHealth').checked === true){
-      recipient +=" " +document.getElementById('philHealth').value;
+      recipient +="" +document.getElementById('philHealth').value;
     }   
-  console.log(recipient); 
+ 
     var amountArea = document.getElementById('amount');
+    console.log(amountArea.value); 
     axios.put('http://localhost:3000/api/process/payBills', { amount : amountArea.value, recipient : recipient })
       .then(function(res) {
             alert('Payment Successfull');
@@ -27,7 +28,7 @@
             document.getElementById('pldt').checked = false;
             document.getElementById('manilaWater').checked = false;
             document.getElementById('philHealth').checked = false;
-            amountArea.value =null;
+            amountArea.value ='';
             recipient ="";
       })
       .catch(function(err) {
