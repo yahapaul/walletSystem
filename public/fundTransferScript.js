@@ -11,7 +11,9 @@
 		console.log(aamount.value);
 		axios.put('http://localhost:3000/api/process/fundTransfer',{ id: iid.value, amount: aamount.value})
 			.then(function(res){
-				
+				alert('Transfer Success');
+				iid.value ='';
+				aamount.value ='';
 			})
 			.catch(function(err){
 				console.log(err);

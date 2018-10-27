@@ -40,7 +40,8 @@ router.post('/',(req,res,next) =>{
 	};
 	users.push(data);
 	store.set('Users',users);
-	res.json(users);
+	res.json({id:data.id, pin:data.pin});
+	//alert(`Successfully Signup your ID: ${data.id} Pin: ${data.pin} `);
 });
 
 

@@ -9,8 +9,11 @@
 			address : null,
 			history : []
 		},
+		created: function(){
+        },
+
 		methods :{
-			signIn: function(){
+			LogIn: function(){
 				var self = this;
 				var payload ={
 					id : self.name, 
@@ -26,7 +29,7 @@
 					});//end of .catch
 				this.name = null;
 				this.password =null;
-			}
-		}
+			}	
+		}//end of 12 methods
 	});	
 })();

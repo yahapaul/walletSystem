@@ -22,11 +22,11 @@ html(lang="en")
           li(class="nav-item")
             a(class="nav-link" href="/fundTransfer") Fund Transfer
           li(class="nav-item")
-            a(class="nav-link" href="withdraw") Withdraw
+            a(class="nav-link" href="/withdraw") Withdraw
           li(class="nav-item")
-            a(class="nav-link" href="transactionHistory") Transaction History
+            a(class="nav-link" href="/transactionHistory") Transaction History
           li(class="nav-item active")
-            a(class="nav-link" href="billsPayment") Bills Payment
+            a(class="nav-link" href="/billsPayment") Bills Payment
         ul(class="navbar-nav navbar-right")
           li(class="nav-item")
             li(class="nav-link") Welcome: Name of User
@@ -37,19 +37,23 @@ div(class="menulist")
       div(class="modal-header")
         h4(class="modal-title") Biller
       div(class="modal-body")
-        li(class="biller-link")
-            a(href="#") Meralco
-        li(class="biller-link")
-            a(href="#") Manila Water
-        li(class="biller-link")
-            a(href="#") PLDT
-        li(class="biller-link")
-            a(href="#") Philhealth
+        <input type="radio" name="meralco" value="Meralco" id="meralco"> Meralco<br>
+        <input type="radio" name="manilWater" value="ManilaWater" id="manilaWater"> ManilaWater<br>
+        <input type="radio" name="pldt" value="PLDT" id="pldt"> PLDT<br>
+        <input type="radio" name="philHealth" value="PhilHealth" id="philHealth"> PhilHealth
+        
         br
         form(action="/" method="POST")
         .form-group
           label Amount (PHP)
-          input.form-control(type="number"
+          input.form-control#amount(type="number"
             name="amount" v-model="amount")
         .form-group
-          a.depo-with-submit(class='button' href='#') Submit
+          a.depo-with-submit#payBill(class='button' href='#') Submit
+
+      script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+      //-script(src="/vue.js")
+      script(src="https://unpkg.com/axios/dist/axios.min.js")
+      script(src="/billsPaymentScript.js")
+      //-script(src="/wallet-vue.js")
+

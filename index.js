@@ -12,6 +12,7 @@ const signInRouter = require('./server/routers/signInRouter');
 const processRouter = require('./server/routers/processRouter');
 const signUpRouter = require('./server/routers/signUpRouter');
 const indexRouter = require('./server/routers/indexRouter');
+const session =require('express-session');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -27,6 +28,8 @@ app.use((req,res,next) =>{
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'pug');
 
+// This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
+// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
 app.use('/',indexRouter);
 app.use('/api/signIn',signInRouter);
 app.use('/api/process',processRouter);

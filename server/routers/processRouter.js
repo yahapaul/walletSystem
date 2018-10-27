@@ -3,19 +3,27 @@ const router = express.Router(); //eslint-disable-line
 const SimpleJsonStore = require('simple-json-store');
 const store = new SimpleJsonStore('./users.json');
 const uniqid = require('uniqid');
+const fs = require('fs');
+let loginID ='';
 let lth = 0;
 
 router.put('/deposit',(req,res) =>{
 	const input = req.body.debit;
 	const users = store.get('Users');
 	let respo = 0;
-	global.ID =123;
 	let temp ={};
-	if(global.ID !== null){
+	try {  
+    	var data = fs.readFileSync('secret.txt', 'utf8');
+    	loginID = data;
+    	//console.log(global.ID);    
+	}catch(e) {
+    	console.log('Error:', e.stack);
+	}
+	if(loginID !== null){
 		for(let i =0; i < users.length; i++){
 			//console.log("PUMASOOOOOK" + users[i].history[0]);
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
-			if(users[i].id === global.ID){
+			if(users[i].id === loginID){
 				users[i].debit += input;
 				respo = users[i].debit;
 
@@ -27,25 +35,33 @@ router.put('/deposit',(req,res) =>{
 				};
 
 				//console.log(users[i].history[lth].transID);
-				console.log(users[i].debit);
+				console.log("Deposit Success" +":" + input);
 				break;
 			}
 		}
 		//console.log(users[0].history[0].transID);
 		store.set('Users',users);	
 	}//end of 8 	
-	res.json(users);	
+	res.json(loginID +"" +input+"");	
 
 });//end of 7
 
 router.put('/withdraw',(req,res) =>{
-	if(global.ID !== null){
+	if(loginID !== null){
 		const users = store.get('Users');
-	 	const input = req.body.withdraw;
+	 	let input = req.body.withdraw;
 	 	let respo = 0;
+	 	try {  
+    		var data = fs.readFileSync('secret.txt', 'utf8');
+    		loginID = data;
+    		//console.log(global.ID);    
+		}catch(e) {
+    		console.log('Error:', e.stack);
+		}
 		for(let i =0; i < users.length; i++){
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
-			if(users[i].id === global.ID){	
+			//console.log(loginID + "sd" + users[i].id);
+			if(users[i].id === loginID){	
 				// console.log('PUMASOOOOOK sa una'+ input +" " + users[i].debit);
 				if(input < users[i].debit){
 					// console.log("PUMASOOOOOK sa pangalawa");
@@ -64,7 +80,7 @@ router.put('/withdraw',(req,res) =>{
 				}
 				else 
 					respo = users[i].debit;
-					console.log('Invalid Withdrawal');	
+					console.log('Invalid Withdrawal Try Again');	
 			}
 		}//end of 33
 		// console.log(users[0].debit);
@@ -75,9 +91,9 @@ router.put('/withdraw',(req,res) =>{
 });//end of 27
 
 router.get('/balance',(req,res) =>{
-	if(global.ID !== null){
+	if(loginID !== null){
 		const users = store.get('Users');
-		user = users.find(users => users.id === global.ID);
+		user = users.find(users => users.id === loginID);
 		console.log(user.debit);
 	}
 	res.json(user.debit)
@@ -86,14 +102,21 @@ router.get('/balance',(req,res) =>{
 router.put('/fundTransfer',(req,res) =>{
 	const users = store.get('Users');
 	let checker = false;
-	if(global.ID !== null){
+	if(loginID !== null){
 		let input ={
 			id : req.body.id,
 			amount : req.body.amount
 		}
+		try{  
+    		var data = fs.readFileSync('secret.txt', 'utf8');
+    		loginID = data;
+    		//console.log(global.ID);    
+		}catch(e){
+    		console.log('Error:', e.stack);
+		}
 
 		for(var i = 0; i < users.length; i++){
-			if(global.ID === users[i].id && users[i].id !== input.id){
+			if(loginID === users[i].id && users[i].id !== input.id){
 				lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
 				if(users[i].debit > input.amount){
 					users[i].debit -= input.amount;
@@ -132,16 +155,22 @@ router.put('/fundTransfer',(req,res) =>{
 });
 
 router.put('/payBills',(req,res)=>{
-	if(global.ID !== null){
+	if(loginID !== null){
 		const users = store.get('Users');
 	 	const input = {
 	 		amount : req.body.amount,
 	 		recipient : req.body.recipient
 	 	};
-
+	 	try{  
+    		var data = fs.readFileSync('secret.txt', 'utf8');
+    		loginID = data;
+    		//console.log(global.ID);    
+		}catch(e){
+    		console.log('Error:', e.stack);
+		}
 		for(let i =0; i < users.length; i++){
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
-			if(users[i].id === global.ID){	
+			if(users[i].id === loginID){	
 				// console.log('PUMASOOOOOK sa una'+ input +" " + users[i].debit);
 				if(input.amount < users[i].debit){
 					// console.log("PUMASOOOOOK sa pangalawa");
@@ -170,9 +199,9 @@ router.put('/payBills',(req,res)=>{
 });
 
 router.get('/history',(req,res) =>{
-	if(global.ID !== null){
+	if(loginID !== null){
 		const users = store.get('Users');
-		user = users.find(users => users.id === global.ID);
+		user = users.find(users => users.id === loginID);
 		console.log(user.history);
 	}
 	res.json(user.history)

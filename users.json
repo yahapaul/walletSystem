@@ -3,7 +3,7 @@
 		{
 			"id": "123",
 			"pin": "123",
-			"debit": 57500,
+			"debit": null,
 			"fullname": "Victor Dalisay",
 			"address": "Qc",
 			"history": [
@@ -30,13 +30,139 @@
 					"transType": "Pay Bills",
 					"details": "Payed 3999 to Meralco",
 					"dateTime": "2018-10-26 09:50:29"
+				},
+				{
+					"transID": "2bijwx3wjnqxkdvy",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:12:06"
+				},
+				{
+					"transID": "2bijwx3wjnqxlhyv",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:12:06"
+				},
+				{
+					"transID": "2bijwwdkjnqxphwp",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:15:42"
+				},
+				{
+					"transID": "2bijwodsjnqy3kre",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:27:49"
+				},
+				{
+					"transID": "2bijwxa0jnqy5h4p",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:29:32"
+				},
+				{
+					"transID": "2bijwxucjnqy9a8c",
+					"transType": "Withdrawal",
+					"details": "withdraw 900",
+					"dateTime": "2018-10-27 12:31:57"
+				},
+				{
+					"transID": "2bijwwr8jnqyjfzf",
+					"transType": "Withdrawal",
+					"details": "withdraw 200",
+					"dateTime": "2018-10-27 12:40:19"
+				},
+				{
+					"transID": "2bijwurgjnqyz5wf",
+					"transType": "Withdrawal",
+					"details": "withdraw 123",
+					"dateTime": "2018-10-27 12:49:51"
+				},
+				{
+					"transID": "2bijwwssjnqz8raw",
+					"transType": "Withdrawal",
+					"details": "withdraw 1",
+					"dateTime": "2018-10-27 13:00:03"
+				},
+				{
+					"transID": "2bijwwssjnqz8y5g",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 13:00:03"
+				},
+				{
+					"transID": "2bijwup8jnqze3fo",
+					"transType": "FundTransfer",
+					"details": "Transfer 100 to 124",
+					"dateTime": "2018-10-27 13:02:25"
+				},
+				{
+					"transID": "2bijwup8jnqzf9c2",
+					"transType": "FundTransfer",
+					"details": "Transfer 1 to 124",
+					"dateTime": "2018-10-27 13:02:25"
+				},
+				{
+					"transID": "2bijwx4cjnr1k9nm",
+					"transType": "Deposit",
+					"details": "Deposit 120",
+					"dateTime": "2018-10-27 13:59:44"
+				},
+				{
+					"transID": "2bijwwy4jnr20fgx",
+					"transType": "Withdrawal",
+					"details": "withdraw 200",
+					"dateTime": "2018-10-27 14:16:15"
+				},
+				{
+					"transID": "2bijwz48jnr5kpfn",
+					"transType": "Withdrawal",
+					"details": "withdraw 200",
+					"dateTime": "2018-10-27 15:57:02"
+				},
+				{
+					"transID": "2bijwz48jnr5ld3i",
+					"transType": "Withdrawal",
+					"details": "withdraw 200",
+					"dateTime": "2018-10-27 15:57:02"
+				},
+				{
+					"transID": "2bijw11c0jnr5okst",
+					"transType": "Deposit",
+					"details": "Deposit 100",
+					"dateTime": "2018-10-27 16:00:13"
+				},
+				{
+					"transID": "2bijw147cjnr67km6",
+					"transType": "Deposit",
+					"details": "Deposit ",
+					"dateTime": "2018-10-27 16:15:05"
+				},
+				{
+					"transID": "2bijw17bsjnr8cgjs",
+					"transType": "FundTransfer",
+					"details": "Transfer 100 to 124",
+					"dateTime": "2018-10-27 17:11:44"
+				},
+				{
+					"transID": "2bijwusojnr8twly",
+					"transType": "Deposit",
+					"details": "Deposit 300",
+					"dateTime": "2018-10-27 17:28:28"
+				},
+				{
+					"transID": "2bijwusojnr8u3hm",
+					"transType": "Withdrawal",
+					"details": "withdraw 300",
+					"dateTime": "2018-10-27 17:28:28"
 				}
 			]
 		},
 		{
 			"id": "124",
-			"pin": "123",
-			"debit": 61001,
+			"pin": "124",
+			"debit": 60801,
 			"fullname": "Kardo Magtanggol",
 			"address": "Calocohan Manila",
 			"history": [
@@ -63,6 +189,12 @@
 					"transType": "FundTransfer",
 					"details": "Transfer 3999 to 123",
 					"dateTime": "2018-10-26 09:26:37"
+				},
+				{
+					"transID": "2bijwx80jnr1tde3",
+					"transType": "Withdrawal",
+					"details": "withdraw 200",
+					"dateTime": "2018-10-27 14:11:34"
 				}
 			]
 		},
@@ -117,22 +249,6 @@
 			"debit": 0,
 			"fullname": "Totoy Gilas",
 			"address": "Binangonan",
-			"history": []
-		},
-		{
-			"id": "127",
-			"pin": 256156,
-			"debit": 0,
-			"fullname": "Pogi Ako",
-			"address": "Rizal",
-			"history": []
-		},
-		{
-			"id": "128",
-			"pin": 790822,
-			"debit": 0,
-			"fullname": "Your Name",
-			"address": "Address",
 			"history": []
 		}
 	]
