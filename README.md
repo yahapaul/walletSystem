@@ -3,7 +3,7 @@ localhost:3000
 Deposit, Withdraw, FundTransfer, PayBills, Working but need to log in valid Account Still Working on validation
 Transaction History Still on Work 
 
-Try APIS
+Try APIS NOTE!! open secret.txt and write valid ID eg.(123) or loog on users.json file
 PUT
 localhost:3000/api/process/withdraw
  -H 'content-type: application/json' 
