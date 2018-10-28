@@ -11,7 +11,7 @@ html(lang="en")
 
   body
     nav(class="navbar navbar-expand-lg navbar-dark bg-primary")
-      a(class="navbar-brand" href="/home") Coin.Purse e-Wallet
+      a#viewHistory(class="navbar-brand" href="/home") Coin.Purse e-Wallet
       button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
         span class="navbar-toggler-icon")
       div(class="collapse navbar-collapse" id="navbarCollapse")
@@ -31,15 +31,14 @@ html(lang="en")
             li(class="nav-link") Welcome: Name of User
             a(class="nav-link" href="#") Logout
 div(class="container")
-    table.layout(class="table table-hover")
+    table#historyTable.layout(class="table table-hover")
         thead
-            tr
-            th(scope="col") Timestamp
-            th(scope="col") Transaction Type
-            th(scope="col") Details
-            th(scope="col") Action
+        
         tbody
-            td Column content
-            td Column content
-            td Column content
-            td Column content
+           
+
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        //-script(src="/vue.js")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="/transactionHistoryScript.js")
+        //-script(src="/wallet-vue.js")

@@ -159,7 +159,7 @@ router.put('/payBills',(req,res)=>{
     	var data = fs.readFileSync('secret.txt', 'utf8');
     	loginID = data;
     	//console.log(global.ID);    
-		}catch(e) {
+	}catch(e) {
     		console.log('Error:', e.stack);
 	}
 
@@ -198,13 +198,25 @@ router.put('/payBills',(req,res)=>{
 	}//end of if 134
 });
 
-router.get('/history',(req,res) =>{
+router.get('/transactionHistory',(req,res) =>{
+	var history =[];
+	try{  
+    	var data = fs.readFileSync('secret.txt', 'utf8');
+    	loginID = data;
+    	//console.log(global.ID);    
+	}catch(e) {
+    		console.log('Error:', e.stack);
+	}
+
 	if(loginID !== null){
 		const users = store.get('Users');
 		user = users.find(users => users.id === loginID);
-		console.log(user.history);
+		user.history.forEach(function(token){
+			history.push(token);
+		});
+		console.log(history[0].transID);
 	}
-	res.json(user.history)
+	res.json(history)
 });
 
 module.exports = router;

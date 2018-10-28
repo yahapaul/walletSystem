@@ -3,16 +3,10 @@
 		{
 			"id": "123",
 			"pin": "123",
-			"debit": 502,
+			"debit": 401,
 			"fullname": "Victor Dalisay",
 			"address": "Qc",
 			"history": [
-				{
-					"transID": "1000",
-					"transType": "1213",
-					"details": "1231",
-					"dateTime": "1231"
-				},
 				{
 					"transID": "2bijw400jnpc6qxw",
 					"transType": "FundTransfer",
@@ -234,6 +228,18 @@
 					"transType": "Withdrawal",
 					"details": "withdraw 99",
 					"dateTime": "2018-10-27 18:19:22"
+				},
+				{
+					"transID": "2bijwjxsjnss6enq",
+					"transType": "Withdrawal",
+					"details": "withdraw 100",
+					"dateTime": "2018-10-28 19:16:37"
+				},
+				{
+					"transID": "2bijwjxsjnss6otx",
+					"transType": "Pay Bills",
+					"details": "Payed 1 to Meralco",
+					"dateTime": "2018-10-28 19:16:37"
 				}
 			]
 		},
