@@ -24,11 +24,11 @@ router.put('/deposit',(req,res) =>{
 			//console.log("PUMASOOOOOK" + users[i].history[0]);
 			lth = (users[i].history.length -1 < 0 ? 0 : users[i].history.length);
 			if(users[i].id === loginID){
-				users[i].debit += input;
+				users[i].debit += parseInt(input,10);
 				respo = users[i].debit;
 
 				users[i].history[lth]= {
-					transID : uniqid(),
+					transID : uniqid(),	
 					transType : 'Deposit',
 					details : `Deposit ${input}`,
 					dateTime : global.dateTime
@@ -200,7 +200,7 @@ router.put('/payBills',(req,res)=>{
 
 router.get('/transactionHistory',(req,res) =>{
 	var history =[];
-	try{  
+	try{	  
     	var data = fs.readFileSync('secret.txt', 'utf8');
     	loginID = data;
     	//console.log(global.ID);    
