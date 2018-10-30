@@ -11,7 +11,12 @@
 		//console.log(aamount.value);
 		axios.put('http://localhost:3000/api/process/withdraw',{ withdraw: amount.value})
 			.then(function(res){
-				alert("Withdraw Success");
+				if(res.data == true){
+					alert("Withdraw Success");
+	
+				}
+				else
+					alert("Invalid Withdrawal");
 				amount.value = "";
 			})
 			.catch(function(err){

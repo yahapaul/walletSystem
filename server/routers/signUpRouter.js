@@ -16,6 +16,7 @@ router.post('/',(req,res,next) =>{
 	let genID = 0;
 	console.log("pumasok ba dito?")
 	let lth = users.length -1;
+	let check = false;
 
 	//console.log(users[lth].id);
 	//console.log("ganto kahaba" +"" +lth.length);
@@ -38,9 +39,13 @@ router.post('/',(req,res,next) =>{
 		address : input.address,
 		history: []
 	};
-	users.push(data);
-	store.set('Users',users);
-	res.json({id:data.id, pin:data.pin});
+	if(input.fullname !== "" || input.fullname !== "" && input.address !== "" || input.address !==""){
+		users.push(data);
+		store.set('Users',users);
+		res.json({id:data.id, pin:data.pin},check);
+	}
+	else
+		res.json({id:null, pin:null});
 	//alert(`Successfully Signup your ID: ${data.id} Pin: ${data.pin} `);
 });
 
